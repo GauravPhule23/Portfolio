@@ -6,13 +6,21 @@ const links = [
     to: "portfolio",
   },
   {
+    name: "Projects",
+    to: "projects",
+  },
+  {
     name: "About",
     to: "about",
   },
   {
-    name: "Projects",
-    to: "projects",
-  }
+    name: "Technologies",
+    to: "skills",
+  },
+  {
+    name: "Experience",
+    to: "experience",
+  },
 ];
 
 export default function NavLinks() {
