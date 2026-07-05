@@ -3,11 +3,11 @@ const skills = [
     title: "Frontend",
     items: [
       "React",
-      "JavaScript",
+      "JavaScript (ES6+)",
       "TypeScript",
-      "Tailwind CSS",
       "HTML5",
       "CSS3",
+      "Tailwind CSS",
     ],
   },
   {
@@ -15,13 +15,14 @@ const skills = [
     items: [
       "Node.js",
       "Express.js",
+      "ASP.NET Core",
       "REST APIs",
-      "JWT",
-      "OAuth",
+      "WebSockets",
+      "Server-Sent Events",
     ],
   },
   {
-    title: "Database",
+    title: "Databases",
     items: [
       "MongoDB",
       "Mongoose",
@@ -39,24 +40,24 @@ const skills = [
     ],
   },
   {
-    title: "Messaging & Queue",
+    title: "Messaging & Infrastructure",
     items: [
-      "Nodemailer",
       "BullMQ",
+      "Nodemailer",
+      "JWT",
       "Cron Jobs",
     ],
   },
   {
-    title: "Libraries & Tools",
+    title: "AI & Developer Tools",
     items: [
-      "Cloudinary",
-      "Multer",
-      "Socket.io",
       "MediaPipe",
+      "CompreFace",
+      "Cloudinary",
       "Postman",
+      "Chart.js",
     ],
   },
-  
 ];
 
 export default skills;

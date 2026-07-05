@@ -16,6 +16,10 @@ export default function FooterLinks() {
       name: "Experience",
       href: "#experience",
     },
+    {
+      name: "Contact",
+      href: "#contact",
+    },
   ];
 
   return (

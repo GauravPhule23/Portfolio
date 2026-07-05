@@ -1,14 +1,14 @@
 const experience = {
   internship: {
     company: "ConvenioTech",
-    role: "Full Stack Developer Intern",
-    duration: "14 Apr 2026 - Present",
-    note: "Internship extended until 15 Jul 2026 due to approved examination leave.",
+    role: "Software Developer Intern",
+    duration: "Apr 2026 - Jul 2026",
+    note: "Product: Navi Mumbai Muncipal Corporation (NMMC) Fire-Services Web Application",
     points: [
-      "Developing scalable MERN applications.",
-      "Building REST APIs and backend services.",
-      "Implementing responsive React interfaces.",
-      "Collaborating on production-ready features."
+      "Engineered a Face Recognition Attendance System using CompreFace, MediaPipe, Docker, and ASP.NET Core.",
+      "Developed backend controllers, repository layers, and integrated frontend AJAX workflows for seamless face based attendance.",
+      "Built and deployed a production-ready static chatbot module and also debugged WordPress and Node.js based chatbot issues.",
+      "Redesigned responsive interfaces, optimized dashboard components, and improved user experience across mobile and desktop platforms."
     ]
   },
 
@@ -24,5 +24,4 @@ const experience = {
     ]
   }
 };
-
 export default experience;

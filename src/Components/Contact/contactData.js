@@ -20,14 +20,14 @@ const contactData = [
   },
   {
     title: "LinkedIn",
-    value: "linkedin.com/in/gaurav-phule",
-    href: "https://linkedin.com/in/gaurav-phule",
+    value: "linkedin.com/in/gaurav-phule-768394248",
+    href: "https://www.linkedin.com/in/gaurav-phule-768394248",
     icon: FaLinkedin,
   },
   {
     title: "Location",
     value: "Pune, Maharashtra",
-    href: "#",
+    href: "https://maps.app.goo.gl/fiSWrQQTEwZtkuhV7",
     icon: FaLocationDot,
   },
 ];

@@ -1,19 +1,23 @@
 import AboutCard from "./AboutCard";
+import { Link } from "react-scroll";
 
 export default function About() {
 
   const services = [
-    "Full Stack Web Development",
-    "REST API Development",
-    "Authentication & Authorization",
-    "Responsive UI Development",
-  ];
+  "Full Stack Development",
+  "Scalable Backend Systems",
+  "AI-Powered Application Development",
+  "Workflow Automation",
+];
 
   const focus = [
     "Building MailSutra",
     "Building SpandanPass",
+    "Advancing Backend Engineering Skills",
+    "Exploring AI Integrations",
     "Preparing for Placements",
     "Practicing DSA",
+    "Continuous Learning"
   ];
 
   return (
@@ -68,11 +72,15 @@ export default function About() {
       <div className="flex gap-5 mt-14">
 
         <button className="px-8 py-4 rounded-full bg-black text-white hover:scale-105 transition">
-          Download Resume
+          <a href="/resume/Gaurav_Santosh_Phule_Resume_2026.pdf" download="Gaurav_Phule_Resume.pdf">
+            Download Resume
+          </a>
         </button>
 
         <button className="px-8 py-4 rounded-full border-2 border-black hover:bg-black hover:text-white transition">
-          Contact Me
+          <a href="/resume/Gaurav_Santosh_Phule_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">
+            View Resume
+          </a>
         </button>
 
       </div>

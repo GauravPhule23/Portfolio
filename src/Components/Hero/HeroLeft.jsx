@@ -1,4 +1,5 @@
 import { FiArrowRight } from "react-icons/fi";
+import { Link } from "react-scroll";
 
 export default function HeroLeft() {
   return (
@@ -22,8 +23,7 @@ export default function HeroLeft() {
       </h1>
 
       <p className="text-gray-500 mt-8 max-w-md leading-8">
-        Full Stack MERN Developer passionate about building scalable web
-        applications, intuitive user experiences, and modern SaaS products.
+        Software Developer focused on building scalable products, intuitive user experiences, and technology that solves real-world problems.
       </p>
 
       <button
@@ -43,7 +43,9 @@ export default function HeroLeft() {
         hover:text-white
         transition-all"
       >
-        Hire Me
+        <Link to="projects" smooth={true} duration={800}>
+          View Projects
+        </Link>
         <FiArrowRight />
       </button>
 

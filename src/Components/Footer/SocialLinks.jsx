@@ -18,7 +18,7 @@ export default function SocialLinks() {
       </a>
 
       <a
-        href="https://linkedin.com"
+        href="https://linkedin.com/in/gaurav-phule"
         target="_blank"
         rel="noreferrer"
         className="hover:text-lime-300 transition"

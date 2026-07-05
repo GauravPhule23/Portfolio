@@ -6,11 +6,11 @@ const stats = [
     title: "Projects",
   },
   {
-    number: "7",
-    title: "Technologies Learned",
+    number: "8+",
+    title: "Technologies Used",
   },
   {
-    number: "7+",
+    number: "10+",
     title: "Daily Avg Coding Hours",
   },
 ];
