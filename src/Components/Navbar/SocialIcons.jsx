@@ -4,10 +4,9 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
-export default function SocialIcons() {
+export default function SocialIcons({ mobile = false }) {
   return (
-    <div className="hidden md:flex items-center gap-5 text-lg">
-
+    <div className={mobile ? "flex items-center gap-4 text-lg" : "hidden md:flex items-center gap-5 text-lg"}>
       <a
         href="https://github.com/GauravPhule23"
         target="_blank"
@@ -23,7 +22,6 @@ export default function SocialIcons() {
       >
         <FaLinkedin className="hover:scale-110 transition" />
       </a>
-
     </div>
   );
 }

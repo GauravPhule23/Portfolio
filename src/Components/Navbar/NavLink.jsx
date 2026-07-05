@@ -27,9 +27,9 @@ const links = [
   },
 ];
 
-export default function NavLinks() {
+export default function NavLinks({ mobile = false, onClick = () => {} }) {
   return (
-    <ul className="hidden md:flex gap-10">
+    <ul className={mobile ? "flex flex-col gap-3" : "hidden md:flex gap-10 items-center"}>
       {links.map((item) => (
         <Link
           key={item.name}
@@ -37,7 +37,8 @@ export default function NavLinks() {
           smooth
           duration={600}
           offset={-80}
-          className="cursor-pointer relative font-medium after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-black hover:after:w-full after:transition-all"
+          onClick={onClick}
+          className={`cursor-pointer relative font-medium ${mobile ? "text-gray-700 hover:text-black" : "after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-black hover:after:w-full after:transition-all"}`}
         >
           {item.name}
         </Link>

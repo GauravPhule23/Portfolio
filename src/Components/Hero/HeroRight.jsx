@@ -8,7 +8,7 @@ import {
 
 export default function HeroRight() {
   return (
-    <div className="relative bg-[#EEF4B4] flex items-center justify-center w-[40%]">
+    <div className="relative bg-[#EEF4B4] flex items-center justify-center w-[100%] lg:w-[40%]">
 
       {/* Social Icons */}
       

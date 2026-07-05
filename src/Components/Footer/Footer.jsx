@@ -1,6 +1,7 @@
 import FooterLinks from "./FooterLinks";
 import SocialLinks from "./SocialLinks";
 import { FiArrowUpRight } from "react-icons/fi";
+import { Link } from "react-scroll";
 
 export default function Footer() {
   return (
@@ -28,14 +29,15 @@ export default function Footer() {
             my inbox is always open.
           </p>
 
-          <a
-            href="mailto:gaurav230605@gmail.com"
+          <p
             className="inline-flex items-center gap-3 mt-12 bg-lime-300 text-black px-8 py-4 rounded-full font-semibold hover:scale-105 transition"
-          >
+          ><Link to="contact" smooth={true} duration={800}>
+
             Get In Touch
+            </Link>
 
             <FiArrowUpRight />
-          </a>
+          </p>
 
         </div>
 
