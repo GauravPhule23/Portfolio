@@ -18,8 +18,8 @@ const projects = [
       "BullMQ",
       "Tailwind CSS",
     ],
-    github: "https://github.com/GauravPhule23",
-    live: "mailto:gaurav230605@gmail.com",
+    github: "https://github.com/GauravPhule23/MailSutra",
+    live: "#",
   },
 
   {
@@ -38,7 +38,7 @@ const projects = [
       "Razorpay",
     ],
     github: "https://github.com/GauravPhule23",
-    live: "https://linkedin.com/in/gaurav-phule",
+    live: "#",
   },
 
   {
@@ -57,7 +57,7 @@ const projects = [
       "TypeScript",
     ],
     github: "https://github.com/GauravPhule23",
-    live: "mailto:gaurav230605@gmail.com",
+    live: "#",
   },
 ];
 
