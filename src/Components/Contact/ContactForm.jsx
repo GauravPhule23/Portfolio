@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { FiSend } from "react-icons/fi";
+import { toast } from "sonner";
+import axios from "axios";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -8,6 +10,7 @@ export default function ContactForm() {
     subject: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm((prev) => ({
@@ -16,12 +19,50 @@ export default function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    for (const key of Object.keys(form)) {
+      if (!form[key] || form[key].trim() === "") {
+        toast.error(`Please fill the ${key} field.`);
+        setLoading(false);
+        return;
+      }
+    }
 
-    console.log(form);
+    //verifying is the email is valid or not
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      toast.error("Please enter a valid email address.");
+      setLoading(false);
+      return;
+    }
 
-    // API later
+    //using axios
+
+    try {
+      const res = await axios.post("https://portfolio-backend-mags.vercel.app/api/contact", form, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      if(res.data.success){
+        toast.success(res.data.message);
+      }else{
+        toast.error(res.data.error || "Something went wrong");
+      }
+    } catch (err) {
+         toast.error("Internal Server Error. Please try again later.");
+    } finally {
+      setForm({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+      setLoading(false);
+    }
+
   };
 
   return (
@@ -75,9 +116,10 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="mt-8 inline-flex items-center gap-3 bg-black text-white px-7 py-4 rounded-full hover:scale-105 transition"
+        className={"mt-8 inline-flex items-center gap-3 bg-black text-white px-7 py-4 rounded-full hover:scale-105 transition" + (loading ? " opacity-50 cursor-not-allowed" : "")}
+        disabled={loading}
       >
-        Send Message
+        {loading ? "Sending..." : "Send Message"}
 
         <FiSend />
       </button>
