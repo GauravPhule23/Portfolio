@@ -3,6 +3,8 @@ import { FiSend } from "react-icons/fi";
 import { toast } from "sonner";
 import axios from "axios";
 
+const backendUrl = import.meta.env.backend_Url;
+
 export default function ContactForm() {
   const [form, setForm] = useState({
     name: "",
@@ -21,6 +23,11 @@ export default function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!backendUrl) {
+      toast.error("Backend URL is not configured.");
+      return;
+    }
+
     setLoading(true);
     for (const key of Object.keys(form)) {
       if (!form[key] || form[key].trim() === "") {
@@ -41,7 +48,7 @@ export default function ContactForm() {
     //using axios
 
     try {
-      const res = await axios.post("https://portfolio-backend-mags.vercel.app/api/contact", form, {
+      const res = await axios.post(`${backendUrl.replace(/\/+$/, "")}/api/contact`, form, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -51,7 +58,7 @@ export default function ContactForm() {
       }else{
         toast.error(res.data.error || "Something went wrong");
       }
-    } catch (err) {
+    } catch {
          toast.error("Internal Server Error. Please try again later.");
     } finally {
       setForm({
